@@ -1,0 +1,235 @@
+name: "🖼️ Preview my card"
+description: Upload a photo, pick a style, and a bot replies with your ASCII profile card. Nothing to install.
+title: "Card preview"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <h2 align="center">Preview your ASCII profile card</h2>
+
+        <p align="center">
+          <b>1.</b> Drop in a photo &nbsp;→&nbsp; <b>2.</b> Pick a style &nbsp;→&nbsp; <b>3.</b> Submit
+        </p>
+        <p align="center">
+          A GitHub Action replies in a minute or two with your card in dark and light, plus the <code>config.yml</code> to copy.<br>
+          Want to try another look? <b>Edit this issue</b> and the card is redrawn.
+        </p>
+
+        > [!WARNING]
+        > Issues are public, so anyone can see the photo you upload here. Close or delete the issue when you're done.
+
+  # ---------------------------------------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 📸 Your photo
+
+  - type: textarea
+    id: photo
+    attributes:
+      label: Your photo
+      description: |
+        Drag a **jpg** or **png** into this box (or click below it to browse).
+        Any background works, it's removed for you. A head-and-shoulders shot against a plain wall works best.
+      placeholder: Drop your photo here
+    validations:
+      required: true
+
+  - type: dropdown
+    id: framing
+    attributes:
+      label: Framing
+      description: How much of you the portrait shows.
+      options:
+        - head (hair to chin, the default)
+        - shoulders (head and shoulders)
+      default: 0
+    validations:
+      required: true
+
+  # ---------------------------------------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 🪪 About you
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The first line of the card, styled like a terminal prompt.
+      placeholder: you@yourname
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: |
+        One row per line:
+        `Key: value` for a row &nbsp;·&nbsp; `# Name` for a section divider &nbsp;·&nbsp; an empty line for a spacer
+      value: |
+        OS: Me
+        Host: Myself
+        Uptime: Powered by coffee
+        Kernel: Developer 1.0.0-LTS
+
+        Languages: TypeScript, Python
+        Hobbies: Coding anything & everything
+
+        # Contact
+        GitHub: yourname
+        Email: you@example.com
+    validations:
+      required: true
+
+  # ---------------------------------------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 🎨 Style
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      options: [github, dracula, nord, gruvbox, tokyo-night, catppuccin, solarized, monokai, one-dark, rose-pine]
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        <details>
+        <summary><b>See every theme</b></summary>
+        <br>
+        <table>
+        <tr>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-github.svg" width="300"><br><code>github</code></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-dracula.svg" width="300"><br><code>dracula</code></td>
+        </tr>
+        <tr>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-nord.svg" width="300"><br><code>nord</code></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-gruvbox.svg" width="300"><br><code>gruvbox</code></td>
+        </tr>
+        <tr>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-tokyo-night.svg" width="300"><br><code>tokyo-night</code></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-catppuccin.svg" width="300"><br><code>catppuccin</code></td>
+        </tr>
+        <tr>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-solarized.svg" width="300"><br><code>solarized</code></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-monokai.svg" width="300"><br><code>monokai</code></td>
+        </tr>
+        <tr>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-one-dark.svg" width="300"><br><code>one-dark</code></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/examples/dark/theme-rose-pine.svg" width="300"><br><code>rose-pine</code></td>
+        </tr>
+        </table>
+        Every theme also has a light version, shown to people browsing GitHub in light mode.
+        </details>
+
+  - type: dropdown
+    id: layout
+    attributes:
+      label: Layout
+      options:
+        - side (portrait left, details right)
+        - portrait-right (details left, portrait right)
+        - stacked (portrait on top, reads better on phones)
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        <details>
+        <summary><b>See the layouts</b></summary>
+        <br>
+        <img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/assets/showcase-layouts.png" alt="side, portrait-right and stacked layouts">
+        </details>
+
+  - type: dropdown
+    id: info_style
+    attributes:
+      label: Info style
+      options:
+        - "dots (Key ...... value)"
+        - aligned (clean columns)
+        - "arrows (› key → value)"
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        <details>
+        <summary><b>See the info styles</b></summary>
+        <br>
+        <img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/assets/showcase-info-styles.png" alt="dots, aligned and arrows info styles">
+        </details>
+
+  - type: dropdown
+    id: charset
+    attributes:
+      label: Portrait characters
+      options:
+        - "classic ( .,:;-=+*#%@ )"
+        - "blocks ( ░▒▓█ )"
+        - "binary ( 01 )"
+        - "dots ( .·•● )"
+        - dense (70 shades)
+        - "hex ( 0-F )"
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        <details>
+        <summary><b>See the portrait characters</b></summary>
+        <br>
+        <img src="https://raw.githubusercontent.com/samir-created/ascii-profile-card/main/assets/showcase-charsets.png" alt="classic, blocks, binary, dots, dense and hex character sets">
+        </details>
+
+  - type: dropdown
+    id: frame
+    attributes:
+      label: Frame
+      options:
+        - plain (no frame)
+        - window (terminal title bar)
+      default: 0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: animations
+    attributes:
+      label: Animations
+      description: "**thoughts**: symbols float up out of your head · **rain**: Matrix-style falling characters · **cursor**: a blinking prompt under your details"
+      options:
+        - label: thoughts
+        - label: rain
+        - label: cursor
+
+  - type: checkboxes
+    id: invert
+    attributes:
+      label: Invert
+      description: Flip light and dark in the portrait for a glowing look.
+      options:
+        - label: invert
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        <p align="center">Hit <b>Create</b> and watch for the bot's reply below. ⏳</p>

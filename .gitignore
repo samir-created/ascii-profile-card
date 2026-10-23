@@ -20,3 +20,6 @@ photo.*
 
 # Build state used by the Makefile
 .cache/
+
+# Written by python -m card.preview
+preview-out/

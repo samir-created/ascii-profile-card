@@ -17,6 +17,8 @@ CELL_ASPECT = 0.5
 
 def cut_out(image, model):
     """Return the photo as RGBA with the background made transparent."""
+    if image.mode in ("P", "PA") and ("transparency" in image.info or image.mode == "PA"):
+        image = image.convert("RGBA")  # a palette PNG keeps its see-through background this way
     if image.mode in ("RGBA", "LA") and image.getchannel("A").getextrema()[0] < 128:
         return image.convert("RGBA")
     try:
@@ -46,29 +48,37 @@ def runs(row):
     return out
 
 
-def head_span(mask, work_width=400):
-    """Top of the hair, plus the head's width and centre.
+def mask_rows(image):
+    data = list(image.point(lambda v: 1 if v > 128 else 0).tobytes())
+    return [data[y * image.width:(y + 1) * image.width] for y in range(image.height)]
 
-    Follows only the outline connected to the top of the head, so other objects in the mask
-    (a laptop, a sign, someone behind you) are ignored, and doesn't rely on seeing a neck:
-    a bowed head or a raised shoulder often hides it. Walk down about one head-length from
-    the top of the hair, then measure the head across its middle, at temple and ear level."""
-    scale = mask.width / work_width
-    small = mask.resize((work_width, max(1, round(mask.height / scale))), Image.Resampling.BOX)
-    w, h = small.size
-    data = list(small.point(lambda v: 1 if v > 128 else 0).tobytes())
-    rows = [data[y * w:(y + 1) * w] for y in range(h)]
-    top = next((y for y, row in enumerate(rows) if any(row)), None)
-    if top is None:
-        sys.exit("Couldn't find a person in the photo. Try a clearer photo or set portrait.crop.")
 
-    # the top of the hair: the widest stretch in the first row with any mask
-    span = max(runs(rows[top]), key=lambda r: r[1] - r[0])
-    tracked, widest, narrowed = [], 0, False
-    for y in range(top, h):
+def peaks(rows, limit=8):
+    """Where each separate shape along the top of the mask begins: a head, but also a raised
+    hand, a lamp the background removal kept, a shoulder. (row, stretch), highest first."""
+    out, above = [], []
+    for y, row in enumerate(rows):
+        here = runs(row)
+        for r in here:
+            if not any(a[0] <= r[1] and a[1] >= r[0] for a in above):
+                out.append((y, r))
+                if len(out) == limit:
+                    return out
+        above = here
+    return out
+
+
+def follow(rows, top, span):
+    """Walk down one shape from its top for about a head's length and measure it like a head:
+    {top, width, centre}, whether it's really a body (it never narrows the way a head does at
+    the jaw, it only gets wider), whether it ran on out of the bottom of the photo, and where
+    the shape carries on below what was measured, as (row, stretch), if it does."""
+    tracked, widest, narrowed, rest, closed, ran_out = [], 0, False, None, False, False
+    for y in range(top, len(rows)):
         centre = (span[0] + span[1]) / 2
         touching = [r for r in runs(rows[y]) if r[0] <= span[1] and r[1] >= span[0]]
         if not touching:
+            closed = True  # the shape ended: a head with no neck showing, or a stray object
             break
         # stay with the stretch nearest the head's centre so far
         span = min(touching, key=lambda r: abs((r[0] + r[1]) / 2 - centre))
@@ -76,6 +86,7 @@ def head_span(mask, work_width=400):
         down = y - top
         below_dome = down >= widest * 0.6  # curly hair wobbles in width; only trust shape below it
         if narrowed and width > widest:
+            rest = (y, span)
             break  # narrowed at the jaw or neck, now widening again: shoulders or arms
         if below_dome and width < widest * 0.97:
             narrowed = True
@@ -83,14 +94,71 @@ def head_span(mask, work_width=400):
             widest = max(widest, width)  # the hair dome sets the head's width; later rows can't
         tracked.append(span)
         if down >= widest * 1.1:  # about a head's length down from the top of the hair
+            rest = (y + 1, span) if y + 1 < len(rows) else None
             break
-
+    else:
+        ran_out = True
     # the middle of the head (temples to ears) is head, never shoulders or arms
     band = tracked[len(tracked) * 4 // 10: len(tracked) * 7 // 10] or tracked
     widths = sorted(r[1] - r[0] + 1 for r in band)
-    head_w = widths[len(widths) // 2]
-    centre = sum((r[0] + r[1]) / 2 for r in band) / len(band)
-    return top * scale, head_w * scale, centre * scale
+    return {
+        "top": top,
+        "width": widths[len(widths) // 2],
+        "centre": sum((r[0] + r[1]) / 2 for r in band) / len(band),
+        "body": not (narrowed or closed),
+        "ran_out": ran_out,
+        "rest": rest,
+    }
+
+
+def follow_head(rows, top, span):
+    """follow(), but a bun, topknot or hat on top of the head looks just like a head on
+    shoulders, so look at what's below: a head is at most about twice as wide and ends
+    inside the photo (at its neck or chin), while shoulders are wider still or run on out
+    of the photo."""
+    shape = follow(rows, top, span)
+    while shape["rest"] and not shape["body"]:
+        below = follow(rows, *shape["rest"])
+        if below["body"] or below["ran_out"] or not 1.3 <= below["width"] / shape["width"] <= 2.2:
+            break
+        shape = below | {"top": shape["top"]}  # measure the head, but crop from the top of the bun
+    return shape
+
+
+# below this share of the photo, what the background removal kept is specks, not a person
+MIN_PERSON = 0.005
+
+
+def head_span(mask, work_width=400):
+    """Top of the hair, plus the head's width and centre.
+
+    Doesn't rely on seeing a neck (a bowed head or a raised shoulder often hides it) and
+    ignores other things in the mask (a laptop, a sign, a raised hand, a lamp the background
+    removal kept): every shape along the top is measured like a head, and the head is the
+    highest one about as wide as the widest of them. Each is measured across its middle,
+    at temple and ear level, about one head-length down from its top."""
+    scale = mask.width / work_width
+    small = mask.resize((work_width, max(1, round(mask.height / scale))), Image.Resampling.BOX)
+    # shave off anything thinner than ~3% of the photo, e.g. a tuft of hair sticking up,
+    # or it would pass for the top of the head and shrink the head to its own width
+    shave = work_width // 30 | 1
+    raw = mask_rows(small)
+    rows = mask_rows(small.filter(ImageFilter.MinFilter(shave)).filter(ImageFilter.MaxFilter(shave)))
+    if sum(map(sum, rows)) < MIN_PERSON * small.width * small.height:
+        sys.exit("Couldn't find a person in the photo. Try a clearer photo or set portrait.crop.")
+
+    shapes = [follow_head(rows, y, span) for y, span in peaks(rows)]
+    # nothing but body: a close-up with the face running off the photo, or hair to the shoulders
+    heads = [s for s in shapes if not s["body"]] or shapes
+    widest = max(s["width"] for s in heads)
+    head = min((s for s in heads if s["width"] >= widest * 0.75), key=lambda s: s["top"])
+
+    # bring hair that was shaved off back into the picture, up to half a head above it
+    left = max(0, round(head["centre"] - head["width"] / 2))
+    right = round(head["centre"] + head["width"] / 2) + 1
+    hair = next(y for y, row in enumerate(raw) if y >= head["top"] or any(row[left:right]))
+    top = max(hair, head["top"] - head["width"] / 2)
+    return top * scale, head["width"] * scale, head["centre"] * scale
 
 
 def auto_crop(mask, columns, rows, framing="shoulders"):
@@ -154,7 +222,8 @@ def main():
     if not photo or not photo.exists():
         print(f"No photo at {photo}; keeping {settings['ascii'].name} as it is.")
         return
-    lines = to_ascii(Image.open(photo), settings)
+    # phone photos are often stored sideways, with a note saying which way is up
+    lines = to_ascii(ImageOps.exif_transpose(Image.open(photo)), settings)
     settings["ascii"].write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {settings['ascii'].name} ({len(lines)} rows) from {photo.name}")
 

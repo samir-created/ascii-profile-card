@@ -1,0 +1,111 @@
+name: Preview card
+
+# Someone opens (or edits) a "Preview my card" issue with a photo in it: build their card with the
+# same code as build.yml, keep the SVGs on the card-previews branch, and reply on the issue with them.
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write  # push the SVGs to card-previews
+  issues: write    # reply on the issue
+
+concurrency:
+  group: preview-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    # only issues made from .github/ISSUE_TEMPLATE/preview.yml, and only when the text changed
+    if: >-
+      contains(github.event.issue.body, '### Your photo') &&
+      (github.event.action == 'opened' || github.event.changes.body)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      U2NET_HOME: ~/.cache/rembg-models
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      NUMBER: ${{ github.event.issue.number }}
+      RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Say it's building
+        run: |
+          {
+            echo "<!-- ascii-profile-card:preview -->"
+            echo "## ⏳ Building your card…"
+            echo
+            echo "This usually takes a minute or two. [Watch it run]($RUN)."
+          } > status.md
+          .github/scripts/preview-reply.sh status.md
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt -r requirements-photo.txt
+
+      - name: Cache background-removal model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/rembg-models
+          key: rembg-models-v1
+
+      - name: Build the card
+        id: card
+        env:
+          # the issue text goes in through the environment, never pasted into a script
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m card.preview preview-out
+
+      - name: Publish the SVGs
+        if: steps.card.outputs.ok == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          dir="issue-$NUMBER"
+          # other issues push to the same branch, so start again from theirs if a push loses the race
+          for attempt in 1 2 3 4 5; do
+            rm -rf pv && git worktree prune
+            if git fetch -q --depth=1 origin card-previews 2>/dev/null; then
+              git worktree add -q --detach pv FETCH_HEAD
+            else
+              git worktree add -q --detach pv HEAD
+              git -C pv checkout -q --orphan "previews-$attempt"
+              git -C pv rm -rqf .
+            fi
+            rm -rf "pv/$dir" && mkdir -p "pv/$dir"
+            cp preview-out/*_mode.svg "pv/$dir/"
+            git -C pv add -A "$dir"
+            git -C pv commit -qm "Preview for #$NUMBER" --allow-empty
+            if git -C pv push -q origin HEAD:refs/heads/card-previews; then
+              # pin the commit so each edit's images get a fresh URL past GitHub's image cache
+              base="https://raw.githubusercontent.com/$REPO/$(git -C pv rev-parse HEAD)/$dir"
+              sed -i "s|__BASE__|$base|g" preview-out/comment.md
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "Couldn't push to card-previews" >&2
+          exit 1
+
+      - name: Reply on the issue
+        if: steps.card.outputs.ok == 'true' || steps.card.outputs.ok == 'false'
+        run: .github/scripts/preview-reply.sh preview-out/comment.md
+
+      - name: Say so if something broke
+        if: failure()
+        run: |
+          {
+            echo "<!-- ascii-profile-card:preview -->"
+            echo "## Couldn't build your card"
+            echo
+            echo "Something went wrong on our side ([log]($RUN)). **Edit this issue** to try again."
+          } > status.md
+          .github/scripts/preview-reply.sh status.md

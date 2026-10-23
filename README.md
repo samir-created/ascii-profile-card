@@ -15,6 +15,7 @@
 </p>
 
 <p align="center">
+  <a href="#try-it-first">Try it first</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#customise-everything">Customise</a> ·
   <a href="#configuration-reference">Config reference</a> ·
@@ -24,6 +25,10 @@
 </p>
 
 ---
+
+## Try it first
+
+Want to see your card before setting anything up? **[Open a preview issue](https://github.com/samir-created/ascii-profile-card/issues/new?template=preview.yml)**, drag in a photo and pick a style. A GitHub Action builds your card and replies on the issue in a minute or two, with the `config.yml` to copy. Edit the issue to try other styles. (Issues are public, so your photo is too; close the issue when you're done.)
 
 ## Quick start
 
