@@ -63,22 +63,22 @@ Every option lives under `style:` in `config.yml`, and they all combine freely. 
 
 <table>
 <tr>
-<td align="center"><img src="examples/theme-github.svg" width="270"><br><code>github</code></td>
-<td align="center"><img src="examples/theme-dracula.svg" width="270"><br><code>dracula</code></td>
-<td align="center"><img src="examples/theme-nord.svg" width="270"><br><code>nord</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-github.svg"><img src="examples/dark/theme-github.svg" width="270"></picture><br><code>github</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-dracula.svg"><img src="examples/dark/theme-dracula.svg" width="270"></picture><br><code>dracula</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-nord.svg"><img src="examples/dark/theme-nord.svg" width="270"></picture><br><code>nord</code></td>
 </tr>
 <tr>
-<td align="center"><img src="examples/theme-gruvbox.svg" width="270"><br><code>gruvbox</code></td>
-<td align="center"><img src="examples/theme-tokyo-night.svg" width="270"><br><code>tokyo-night</code></td>
-<td align="center"><img src="examples/theme-catppuccin.svg" width="270"><br><code>catppuccin</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-gruvbox.svg"><img src="examples/dark/theme-gruvbox.svg" width="270"></picture><br><code>gruvbox</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-tokyo-night.svg"><img src="examples/dark/theme-tokyo-night.svg" width="270"></picture><br><code>tokyo-night</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-catppuccin.svg"><img src="examples/dark/theme-catppuccin.svg" width="270"></picture><br><code>catppuccin</code></td>
 </tr>
 <tr>
-<td align="center"><img src="examples/theme-solarized.svg" width="270"><br><code>solarized</code></td>
-<td align="center"><img src="examples/theme-monokai.svg" width="270"><br><code>monokai</code></td>
-<td align="center"><img src="examples/theme-one-dark.svg" width="270"><br><code>one-dark</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-solarized.svg"><img src="examples/dark/theme-solarized.svg" width="270"></picture><br><code>solarized</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-monokai.svg"><img src="examples/dark/theme-monokai.svg" width="270"></picture><br><code>monokai</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-one-dark.svg"><img src="examples/dark/theme-one-dark.svg" width="270"></picture><br><code>one-dark</code></td>
 </tr>
 <tr>
-<td align="center"><img src="examples/theme-rose-pine.svg" width="270"><br><code>rose-pine</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/theme-rose-pine.svg"><img src="examples/dark/theme-rose-pine.svg" width="270"></picture><br><code>rose-pine</code></td>
 </tr>
 </table>
 
@@ -102,11 +102,11 @@ themes:
 
 <table>
 <tr>
-<td align="center" rowspan="2"><img src="examples/layout-stacked.svg" width="270"><br><code>stacked</code>: portrait on top, details below.<br>Narrower, so it reads better on phones.</td>
-<td align="center"><img src="examples/layout-side.svg" width="270"><br><code>side</code>: portrait left (default)</td>
+<td align="center" rowspan="2"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/layout-stacked.svg"><img src="examples/dark/layout-stacked.svg" width="270"></picture><br><code>stacked</code>: portrait on top, details below.<br>Narrower, so it reads better on phones.</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/layout-side.svg"><img src="examples/dark/layout-side.svg" width="270"></picture><br><code>side</code>: portrait left (default)</td>
 </tr>
 <tr>
-<td align="center"><img src="examples/layout-portrait-right.svg" width="270"><br><code>portrait-right</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/layout-portrait-right.svg"><img src="examples/dark/layout-portrait-right.svg" width="270"></picture><br><code>portrait-right</code></td>
 </tr>
 </table>
 
@@ -116,9 +116,9 @@ themes:
 
 <table>
 <tr>
-<td align="center"><img src="examples/info-dots.svg" width="270"><br><code>dots</code>: <code>Key ...... value</code></td>
-<td align="center"><img src="examples/info-aligned.svg" width="270"><br><code>aligned</code>: clean columns</td>
-<td align="center"><img src="examples/info-arrows.svg" width="270"><br><code>arrows</code>: <code>› key → value</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/info-dots.svg"><img src="examples/dark/info-dots.svg" width="270"></picture><br><code>dots</code>: <code>Key ...... value</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/info-aligned.svg"><img src="examples/dark/info-aligned.svg" width="270"></picture><br><code>aligned</code>: clean columns</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/info-arrows.svg"><img src="examples/dark/info-arrows.svg" width="270"></picture><br><code>arrows</code>: <code>› key → value</code></td>
 </tr>
 </table>
 
@@ -128,28 +128,27 @@ themes:
 
 <table>
 <tr>
-<td align="center"><img src="examples/charset-classic.svg" width="270"><br><code>classic</code> <code>.,:;-=+*#%@</code></td>
-<td align="center"><img src="examples/charset-blocks.svg" width="270"><br><code>blocks</code> <code>░▒▓█</code></td>
-<td align="center"><img src="examples/charset-binary.svg" width="270"><br><code>binary</code> <code>01</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/charset-classic.svg"><img src="examples/dark/charset-classic.svg" width="270"></picture><br><code>classic</code> <code>.,:;-=+*#%@</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/charset-blocks.svg"><img src="examples/dark/charset-blocks.svg" width="270"></picture><br><code>blocks</code> <code>░▒▓█</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/charset-binary.svg"><img src="examples/dark/charset-binary.svg" width="270"></picture><br><code>binary</code> <code>01</code></td>
 </tr>
 <tr>
-<td align="center"><img src="examples/charset-dots.svg" width="270"><br><code>dots</code> <code>.·•●</code></td>
-<td align="center"><img src="examples/charset-dense.svg" width="270"><br><code>dense</code> (70 shades)</td>
-<td align="center"><img src="examples/charset-hex.svg" width="270"><br><code>hex</code> <code>0-F</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/charset-dots.svg"><img src="examples/dark/charset-dots.svg" width="270"></picture><br><code>dots</code> <code>.·•●</code></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/charset-dense.svg"><img src="examples/dark/charset-dense.svg" width="270"></picture><br><code>dense</code> (70 shades)</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/charset-hex.svg"><img src="examples/dark/charset-hex.svg" width="270"></picture><br><code>hex</code> <code>0-F</code></td>
 </tr>
 <tr>
-<td align="center" colspan="3"><img src="examples/invert.svg" width="270"><br><code>invert: true</code></td>
+<td align="center" colspan="3"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/invert.svg"><img src="examples/dark/invert.svg" width="270"></picture><br><code>invert: true</code></td>
 </tr>
 </table>
 
 ### Frame
 
-`style.frame`
+`style.frame`: `plain` (default, as in every other example) or `window`, which adds a terminal title bar.
 
 <table>
 <tr>
-<td align="center"><img src="examples/layout-side.svg" width="270"><br><code>plain</code> (default)</td>
-<td align="center"><img src="examples/frame-window.svg" width="270"><br><code>window</code>: terminal title bar</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/frame-window.svg"><img src="examples/dark/frame-window.svg" width="270"></picture><br><code>window</code></td>
 </tr>
 </table>
 
@@ -159,22 +158,16 @@ themes:
 
 <table>
 <tr>
-<td align="center"><img src="examples/animation-thoughts.svg" width="270"><br><code>thoughts</code>: symbols float up out of your head</td>
-<td align="center"><img src="examples/animation-rain.svg" width="270"><br><code>rain</code>: faint falling characters</td>
-<td align="center"><img src="examples/animation-cursor.svg" width="270"><br><code>cursor</code>: prompt with a blinking cursor</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/animation-thoughts.svg"><img src="examples/dark/animation-thoughts.svg" width="270"></picture><br><code>thoughts</code>: symbols float up out of your head</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/animation-rain.svg"><img src="examples/dark/animation-rain.svg" width="270"></picture><br><code>rain</code>: faint falling characters</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/animation-cursor.svg"><img src="examples/dark/animation-cursor.svg" width="270"></picture><br><code>cursor</code>: prompt with a blinking cursor</td>
 </tr>
 <tr>
-<td align="center"><img src="examples/animation-none.svg" width="270"><br><code>[]</code>: still</td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/animation-none.svg"><img src="examples/dark/animation-none.svg" width="270"></picture><br><code>[]</code>: still</td>
 </tr>
 </table>
 
-The floating symbols are yours to pick: maths, your stack, your jokes.
-
-```yaml
-thoughts:
-  rise_seconds: [6, 9]   # each symbol takes 6–9 s to float up and fade
-  symbols: ["∑", "π", "<?php", "useState()", "npm i", "def", "LLM", "∇loss"]
-```
+The floating symbols and their speed are yours to pick: see `thoughts:` in the [config reference](#configuration-reference).
 
 ### Header: anything above the details
 
@@ -182,54 +175,34 @@ thoughts:
 
 <table>
 <tr>
-<td align="center"><img src="examples/header-greeting.svg" width="270"><br><b>greeting</b></td>
-<td align="center"><img src="examples/header-banner.svg" width="270"><br><b>ASCII banner</b></td>
-<td align="center"><img src="examples/header-quote.svg" width="270"><br><b>quote</b></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/header-greeting.svg"><img src="examples/dark/header-greeting.svg" width="270"></picture><br><b>greeting</b></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/header-banner.svg"><img src="examples/dark/header-banner.svg" width="270"></picture><br><b>ASCII banner</b></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/header-quote.svg"><img src="examples/dark/header-quote.svg" width="270"></picture><br><b>quote</b></td>
 </tr>
 </table>
 
 ```yaml
 header:
-  - text: "Hi, I'm Samir 👋"        # greeting
+  - text: "Hi, I'm Samir 👋"
     color: key
     size: 22
-    bold: true
-  - "Building plugins, agents & dev tools"   # a plain string works too
-
-  - art: |                           # ASCII art, kept exactly as written
+  - "Building plugins, agents & dev tools"
+  - art: |            # ASCII art (make it with any figlet tool, e.g. patorjk.com/software/taag)
       ┌─┐┌─┐┌┬┐┬┬─┐
       └─┐├─┤││││├┬┘
-      └─┘┴ ┴┴ ┴┴┴└─
-    color: value
-
-  - text: "“Talk is cheap. Show me the code.”"   # quote
-    align: center
-  - text: "— Linus Torvalds"
-    color: dots
-    size: 13
-    align: center
 ```
 
-Generate banner text with any figlet tool (e.g. [patorjk.com/software/taag](https://patorjk.com/software/taag)) and paste it under `art: |`. If a line is too wide for the details column, the build prints a warning telling you by how much.
+A line too wide for the details column makes the build print a warning.
 
 ### Mix and match
 
 <table>
 <tr>
-<td align="center"><img src="examples/combo-hacker.svg" width="270"><br><b>hacker</b><br><sub>monokai · binary · window · rain + cursor</sub></td>
-<td align="center"><img src="examples/combo-minimal.svg" width="270"><br><b>minimal</b><br><sub>nord · aligned · dots · still</sub></td>
-<td align="center"><img src="examples/combo-retro.svg" width="270"><br><b>retro</b><br><sub>gruvbox · blocks · arrows · window</sub></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/combo-hacker.svg"><img src="examples/dark/combo-hacker.svg" width="270"></picture><br><b>hacker</b><br><sub>monokai · binary · window · rain + cursor</sub></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/combo-minimal.svg"><img src="examples/dark/combo-minimal.svg" width="270"></picture><br><b>minimal</b><br><sub>nord · aligned · dots · still</sub></td>
+<td align="center"><picture><source media="(prefers-color-scheme: light)" srcset="examples/light/combo-retro.svg"><img src="examples/dark/combo-retro.svg" width="270"></picture><br><b>retro</b><br><sub>gruvbox · blocks · arrows · window</sub></td>
 </tr>
 </table>
-
-```yaml
-# the "hacker" card
-style:
-  theme: monokai
-  charset: binary
-  frame: window
-  animations: [rain, cursor]
-```
 
 ---
 
@@ -304,33 +277,30 @@ make
 
 The first run sets everything up. After that it only redoes what changed (a new photo or new portrait settings redraw the portrait; anything else just rebuilds the cards) and opens both cards in your browser. `make help` lists the extras (`make test`, `make gallery`, `make reset`).
 
-The first photo conversion downloads the background-removal model once (~170 MB), and later runs reuse it.
+The first photo conversion downloads the background-removal model once (~170 MB).
 
-Or run the Python commands directly:
+<details>
+<summary>Without make</summary>
 
 ```sh
 pip install -r requirements.txt          # pillow, pyyaml
-pip install -r requirements-photo.txt    # rembg, only for turning a photo into ASCII
-
-python -m card.portrait    # photo.jpg  -> ascii.txt
-python -m card.build       # config.yml -> dark_mode.svg, light_mode.svg
-python -m card.gallery     # every style option -> examples/
+pip install -r requirements-photo.txt    # rembg, only for photo -> ASCII (skip it for a transparent PNG)
+python -m card.portrait                  # photo.jpg  -> ascii.txt
+python -m card.build                     # config.yml -> dark_mode.svg, light_mode.svg
+python -m card.gallery                   # every style option -> examples/
 python -m unittest discover -s tests
 ```
-
-Already have a transparent PNG (background removed)? Then `card.portrait` doesn't need rembg at all.
+</details>
 
 ## How it works
 
-1. **`card/portrait.py`** removes the background with [rembg](https://github.com/danielgatis/rembg). It finds your head by following the outline down from the top of your hair, ignoring anything else in the photo (laptops, signs, people behind you). It then measures the head across the temples, so a bowed head or a raised shoulder doesn't throw it off. Then it crops to head and shoulders and converts to "ink-style" ASCII: dark areas (hair, glasses, beard) get the dense characters, and edges are boosted so features survive at 80 columns.
-2. **`card/build.py`** lays out the portrait and info rows as SVG `<text>`, picks colours from the theme, and adds the animations as CSS keyframes inside the SVG. GitHub only allows motion that's built into the image file itself.
-3. **`.github/workflows/build.yml`** reruns both on every change and commits the result. The portrait step only runs when the photo changed, so hand edits to `ascii.txt` survive.
+1. **`card/portrait.py`** removes the background ([rembg](https://github.com/danielgatis/rembg), runs locally), finds your head even with a bowed head or clutter around you, and converts it to ink-style ASCII.
+2. **`card/build.py`** lays out the portrait and details as SVG text, with themes and CSS animations inside the file (GitHub runs no scripts).
+3. **`.github/workflows/build.yml`** rebuilds on every change. The portrait is only redone when the photo changes, so hand edits to `ascii.txt` survive.
 
 ## FAQ
 
 **My card didn't update.** `raw.githubusercontent.com` caches files for about 5 minutes. Wait, then hard-refresh.
-
-**The card is blank for a moment when my profile loads.** That's GitHub fetching the image. Use the full `raw.githubusercontent.com` links from [Quick start](#quick-start), not relative paths.
 
 **Can I see the animation before pushing?** Open any `.svg` in your browser.
 
@@ -338,13 +308,9 @@ Already have a transparent PNG (background removed)? Then `card.portrait` doesn'
 
 ## Credits
 
-Huge shout-out to **[Andrew Grant (@Andrew6rant)](https://github.com/Andrew6rant)**. His [profile README](https://github.com/Andrew6rant/Andrew6rant), with its neofetch-style card, ASCII portrait and theme-aware `dark_mode.svg` / `light_mode.svg`, is what inspired this project. If you like the look, go give his repo a ⭐.
+Inspired by **[Andrew Grant (@Andrew6rant)](https://github.com/Andrew6rant)**'s [profile README](https://github.com/Andrew6rant/Andrew6rant): go give it a ⭐. This project is a separate, from-scratch implementation and includes none of his code.
 
-This project is a separate, from-scratch implementation; it doesn't include any of his code.
-
-The layout itself goes back to [neofetch](https://github.com/dylanaraps/neofetch) by Dylan Araps, the terminal tool that made "ASCII art + system info" iconic.
-
-Thanks as well to [rembg](https://github.com/danielgatis/rembg) for the background removal that turns any photo into a clean portrait.
+The layout goes back to [neofetch](https://github.com/dylanaraps/neofetch) by Dylan Araps; background removal by [rembg](https://github.com/danielgatis/rembg).
 
 ## License
 
