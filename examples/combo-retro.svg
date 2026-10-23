@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,'SFMono-Regular',Menlo,monospace" width="1126" height="624">
+<style>
+.key {fill: #fe8019;}
+.value {fill: #b8bb26;}
+.dots {fill: #665c54;}
+text, tspan {white-space: pre;}
+.thought {opacity: 0; transform-box: fill-box; transform-origin: center; animation: think ease-out infinite;}
+@keyframes think {
+  0% {opacity: 0; transform: translate(0, 0) scale(0.6);}
+  20% {opacity: 0.95;}
+  70% {opacity: 0.6;}
+  100% {opacity: 0; transform: translate(var(--drift), -75px) scale(1.1);}
+}
+.rain {opacity: 0.35; animation: fall linear infinite;}
+@keyframes fall {from {transform: translateY(-100%);} to {transform: translateY(var(--fall));}}
+.cursor {animation: blink 1s step-end infinite;}
+@keyframes blink {0%, 100% {opacity: 1;} 50% {opacity: 0;}}
+@media (prefers-reduced-motion: reduce) {
+  .thought, .rain {display: none;}
+  .cursor {animation: none;}
+}
+</style>
+<defs><clipPath id="card"><rect width="1126" height="624" rx="15"/></clipPath></defs>
+<rect width="1126" height="624" fill="#282828" rx="15"/>
+<path d="M15 0H1111A15 15 0 0 1 1126 15V34H0V15A15 15 0 0 1 15 0Z" fill="#ebdbb2" fill-opacity="0.07"/>
+<circle cx="24" cy="17" r="6" fill="#ff5f56"/><circle cx="42" cy="17" r="6" fill="#ffbd2e"/><circle cx="60" cy="17" r="6" fill="#27c93f"/>
+<text x="563" y="21" font-size="12px" text-anchor="middle" fill="#665c54">shrestha@samir — zsh</text>
+<text fill="#ebdbb2" font-size="9px">
+<tspan x="24.0" y="147.0">                                         ▓▓▓▓▓▓▓</tspan>
+<tspan x="24.0" y="157.5">                                   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██</tspan>
+<tspan x="24.0" y="168.0">                                ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████▓▓▓▓▓▓▓▓█</tspan>
+<tspan x="24.0" y="178.5">                           ▓▓▓▓▓▓▓████████▓▓▓▓▓▓▓███▓███▓▓▓▓▓</tspan>
+<tspan x="24.0" y="189.0">                        ▓▓▓▓▓▓▓▓▓████████████▓▓▓▓▓▓▓▓▓██████▓▓▓</tspan>
+<tspan x="24.0" y="199.5">                      ▓▓▓▓████████████████████████████████▓▓▓▓▓▓▓</tspan>
+<tspan x="24.0" y="210.0">                    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓████████████████████▓████▓▓▓▓▓▓▓</tspan>
+<tspan x="24.0" y="220.5">                   ▓▓▓████▓▓▓▓▓▓█████████████████████████████████▓▓</tspan>
+<tspan x="24.0" y="231.0">                 ▓▓▓▓▓███▓▓▓██████████████▓████████████████████▓██▓▓</tspan>
+<tspan x="24.0" y="241.5">                ▓▓▓▓▓█████████████████████████████████████████████▓▓▓</tspan>
+<tspan x="24.0" y="252.0">               ▓▓▓██████████████████████████████████████████████████▓▓</tspan>
+<tspan x="24.0" y="262.5">             ▓▓▓▓████████████████████████████████████████████████████▓▓</tspan>
+<tspan x="24.0" y="273.0">            ▓▓▓▓█████████████████████████████████████████████████████▓▓</tspan>
+<tspan x="24.0" y="283.5">           ▓▓▓████████████████████████████████████████████████████████▓</tspan>
+<tspan x="24.0" y="294.0">           ▓▓▓▓███████████████████████████████████████████████████████▓▓</tspan>
+<tspan x="24.0" y="304.5">          ▓▓█▓▓██████████████████████▓▓████████████████▓▓▓▓▓▓▓▓▓██████▓▓</tspan>
+<tspan x="24.0" y="315.0">         ▓▓▓▓▓███████████████████████▓▓▓██████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███▓▓</tspan>
+<tspan x="24.0" y="325.5">        ▓▓█▓█▓██████████████████████▓▓▓▓▓▓▓▓▓███▓▓▓▓▓▒▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓</tspan>
+<tspan x="24.0" y="336.0">       ▓▓▓▓▓█████████████████▓▓████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▓▓▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓</tspan>
+<tspan x="24.0" y="346.5">       ▓▒██▓█████████████▓▓▓▓▓▓▓▓▓█▓▓▓▓▓▓▓▓▓▓▓▒▒▓▓▒▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓</tspan>
+<tspan x="24.0" y="357.0">       ▓▓▓█▓█▓██████████▓▓▓▓▓▓▓▓▓▓██▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓██▓▓▒▒▓▓▓▓▓▓▓▓</tspan>
+<tspan x="24.0" y="367.5">       ▓▓▓█▓▓▓▓█████▓▓▓█▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒▓▓▒▒▓▓▒▓▓▓▓▓</tspan>
+<tspan x="24.0" y="378.0">         ▓▓▓▓▓█▓███▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓██▓▓▓▒▒▓▒▒▒▓▓▓▓▓▒▒▓▓▒█▓▓▒</tspan>
+<tspan x="24.0" y="388.5">          ▓▓▓▓▓▓▓▓▓▓█▓▓██████▓▓▓▓▓▓▒▒▓▓▓███▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓█▓▒▓▓▒▓▓▓▒▓</tspan>
+<tspan x="24.0" y="399.0">             ▓▓▓▒▒▓▓▓▓█▓▓▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▓▒▒▒▒▒▒▓▓█▓▓▒▓▓▒▓▓▓▒▒█</tspan>
+<tspan x="24.0" y="409.5">               ▓▒▒▒▒▓▓▒▓▓▒▒▒▒▒▓▓█▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▓▓▓▒▒▒█▓▓▓▒▒▓▓▒▒▒▒▒▓▒▒▓█▓▓</tspan>
+<tspan x="24.0" y="420.0">                ▓▒▒▒▓▒▒▓▓▒▓▓▒▒▒▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▓▓██▓▓</tspan>
+<tspan x="24.0" y="430.5">                  ▓▒▓▒▒▒▓▓▓▓▓▒▒▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▓▓▓▒▒▒▒▒▓▒▒▒▒▒▒▒▒▓█▓██▓▒▒▓</tspan>
+<tspan x="24.0" y="441.0">                    ▓▒▒▒▒▒▓▓▓▓▒▒▓▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒██▓▓██▓▓▓</tspan>
+<tspan x="24.0" y="451.5">                    ▓▒▒▒▒▒▒▒▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒██▓▓▓██▓▓</tspan>
+<tspan x="24.0" y="462.0">                    ▓▒▒▒▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓██▓▓▓██▓▓</tspan>
+<tspan x="24.0" y="472.5">                        ▓███▓▓▒▒▒▒▓▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓██▓▓████▓</tspan>
+<tspan x="24.0" y="483.0">                         ▓▓▓▓▓██▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▓███▓▓████▓</tspan>
+<tspan x="24.0" y="493.5">                          ▓▒▓▓▓▓███▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓███▓▓████▓</tspan>
+<tspan x="24.0" y="504.0">                          ▓▒▓▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▓██▓█▓▓█████</tspan>
+<tspan x="24.0" y="514.5">                            ▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▓█▓▓██▓▓█████</tspan>
+<tspan x="24.0" y="525.0">                          ▓▓▓▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓█▓▓█▓█▓██████</tspan>
+<tspan x="24.0" y="535.5">                        ▓▓▓▒▒▓█▓▓▓▓▓▓▓▓███████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓█▓▓█▓▓████████</tspan>
+<tspan x="24.0" y="546.0">                     ▓▓▒▒▒▒▒▒▓▓▓█████████▓▓████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓▓▒▓████████</tspan>
+<tspan x="24.0" y="556.5">                   ▒▒▒▒▒▒▒▓▒▓▓▒▒▓▓██████▓▓▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓▓▒▒▓████████</tspan>
+<tspan x="24.0" y="567.0">                 ▓▓▒▒▒▒▒▒▓▓▒▓▓▒▒▓███████▓▓███▓▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓▓█▓█▓▒▒▒▒█████████</tspan>
+<tspan x="24.0" y="577.5">               ▓▓▓▓▒▒▒▒▒▓▓▒▓▓▓▓████████▓▓▓████▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓█▓█▓▒░▒▒▒█████████</tspan>
+<tspan x="24.0" y="588.0">            ▓▓▓▓▓█▒▒▒▒▒▒▓▓▒▓▓█████████▓▓▓██████▒▒▒▒▓▓▓▓▒▒▒▒▒▓██▓▓▓▒░▒▒▓█████████</tspan>
+<tspan x="24.0" y="598.5">          ▓▓▓▓▓▓█▓▓▓▓▓▓▓█▓▓▓██▓███████▓████████▓▓▓▒▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▒▒▓██████████</tspan>
+</text>
+
+<text fill="#ebdbb2" font-size="16px">
+<tspan x="488" y="225"><tspan class="key">❯ </tspan>shrestha@samir</tspan>
+<tspan x="488" y="245"><tspan class="dots">› </tspan><tspan class="key">OS</tspan><tspan class="dots"> → </tspan><tspan class="value">Me</tspan></tspan>
+<tspan x="488" y="265"><tspan class="dots">› </tspan><tspan class="key">Host</tspan><tspan class="dots"> → </tspan><tspan class="value">Myself</tspan></tspan>
+<tspan x="488" y="285"><tspan class="dots">› </tspan><tspan class="key">Uptime</tspan><tspan class="dots"> → </tspan><tspan class="value">Powered by coffee</tspan></tspan>
+<tspan x="488" y="305"><tspan class="dots">› </tspan><tspan class="key">Kernel</tspan><tspan class="dots"> → </tspan><tspan class="value">Software Dev 1.0.0-LTS</tspan></tspan>
+<tspan x="488" y="325"></tspan>
+<tspan x="488" y="345"><tspan class="dots">› </tspan><tspan class="key">Languages.Programming</tspan><tspan class="dots"> → </tspan><tspan class="value">PHP, JS, TS, Python</tspan></tspan>
+<tspan x="488" y="365"><tspan class="dots">› </tspan><tspan class="key">Languages.Web</tspan><tspan class="dots"> → </tspan><tspan class="value">React, Next.js</tspan></tspan>
+<tspan x="488" y="385"><tspan class="dots">› </tspan><tspan class="key">Languages.Real</tspan><tspan class="dots"> → </tspan><tspan class="value">English</tspan></tspan>
+<tspan x="488" y="405"></tspan>
+<tspan x="488" y="425"><tspan class="dots">› </tspan><tspan class="key">Hobbies.Software</tspan><tspan class="dots"> → </tspan><tspan class="value">Coding anything &amp; everything</tspan></tspan>
+<tspan x="488" y="445"><tspan class="dots">› </tspan><tspan class="key">Hobbies.Mind</tspan><tspan class="dots"> → </tspan><tspan class="value">Problem solving</tspan></tspan>
+<tspan x="488" y="465"></tspan>
+<tspan x="488" y="485"><tspan class="dots"># </tspan>Contact</tspan>
+<tspan x="488" y="505"><tspan class="dots">› </tspan><tspan class="key">Email.Personal</tspan><tspan class="dots"> → </tspan><tspan class="value">contact.samirshrestha@gmail.com</tspan></tspan>
+<tspan x="488" y="525"><tspan class="dots">› </tspan><tspan class="key">GitHub</tspan><tspan class="dots"> → </tspan><tspan class="value">CodeSawMir</tspan></tspan>
+<tspan x="488" y="545"></tspan>
+<tspan x="488" y="565"><tspan class="dots"># </tspan>Status</tspan>
+<tspan x="488" y="585"><tspan class="dots">› </tspan><tspan class="key">Currently</tspan><tspan class="dots"> → </tspan><tspan class="value">learning++  // no overflow yet</tspan></tspan>
+</text>
+<text class="thought" x="108" y="232" font-size="12px" fill="#fe8019" style="--drift: -12px; animation-duration: 6.45s; animation-delay: -4.20s">∑</text>
+<text class="thought" x="120" y="222" font-size="16px" fill="#b8bb26" style="--drift: -5px; animation-duration: 6.17s; animation-delay: -3.13s">π</text>
+<text class="thought" x="127" y="212" font-size="12px" fill="#665c54" style="--drift: -13px; animation-duration: 6.27s; animation-delay: -2.66s">∫dx</text>
+<text class="thought" x="144" y="190" font-size="13px" fill="#fe8019" style="--drift: -10px; animation-duration: 7.19s; animation-delay: -7.02s">√2</text>
+<text class="thought" x="151" y="180" font-size="13px" fill="#b8bb26" style="--drift: 10px; animation-duration: 6.43s; animation-delay: -0.76s">λ</text>
+<text class="thought" x="160" y="180" font-size="12px" fill="#665c54" style="--drift: -9px; animation-duration: 7.71s; animation-delay: -1.45s">∞</text>
+<text class="thought" x="176" y="170" font-size="16px" fill="#fe8019" style="--drift: 12px; animation-duration: 7.86s; animation-delay: -3.90s">Δ</text>
+<text class="thought" x="187" y="170" font-size="13px" fill="#b8bb26" style="--drift: -11px; animation-duration: 7.36s; animation-delay: -2.21s">e^iπ</text>
+<text class="thought" x="192" y="170" font-size="14px" fill="#665c54" style="--drift: 11px; animation-duration: 6.90s; animation-delay: -3.42s">x²</text>
+<text class="thought" x="209" y="159" font-size="13px" fill="#fe8019" style="--drift: -12px; animation-duration: 6.22s; animation-delay: -3.18s">log n</text>
+<text class="thought" x="223" y="148" font-size="14px" fill="#b8bb26" style="--drift: -12px; animation-duration: 7.27s; animation-delay: -6.99s">&lt;?php</text>
+<text class="thought" x="227" y="148" font-size="12px" fill="#665c54" style="--drift: 5px; animation-duration: 7.05s; animation-delay: -3.50s">$this-&gt;</text>
+<text class="thought" x="245" y="138" font-size="14px" fill="#fe8019" style="--drift: -11px; animation-duration: 7.42s; animation-delay: -4.93s">add_action()</text>
+<text class="thought" x="252" y="138" font-size="14px" fill="#b8bb26" style="--drift: 11px; animation-duration: 8.98s; animation-delay: -7.38s">&lt;App /&gt;</text>
+<text class="thought" x="256" y="138" font-size="13px" fill="#665c54" style="--drift: -9px; animation-duration: 7.39s; animation-delay: -1.24s">useState()</text>
+<text class="thought" x="275" y="138" font-size="16px" fill="#fe8019" style="--drift: 13px; animation-duration: 6.39s; animation-delay: -1.58s">{props}</text>
+<text class="thought" x="279" y="138" font-size="14px" fill="#b8bb26" style="--drift: -12px; animation-duration: 7.35s; animation-delay: -4.04s">npm i</text>
+<text class="thought" x="296" y="148" font-size="13px" fill="#665c54" style="--drift: 14px; animation-duration: 8.96s; animation-delay: -6.12s">await</text>
+<text class="thought" x="300" y="148" font-size="13px" fill="#fe8019" style="--drift: -9px; animation-duration: 6.45s; animation-delay: -4.25s">=&gt;</text>
+<text class="thought" x="313" y="148" font-size="14px" fill="#b8bb26" style="--drift: 10px; animation-duration: 6.01s; animation-delay: -2.52s">def</text>
+<text class="thought" x="331" y="159" font-size="16px" fill="#665c54" style="--drift: -9px; animation-duration: 8.07s; animation-delay: -4.16s">import</text>
+<text class="thought" x="336" y="159" font-size="12px" fill="#fe8019" style="--drift: 5px; animation-duration: 7.18s; animation-delay: -3.46s">print()</text>
+<text class="thought" x="353" y="180" font-size="13px" fill="#b8bb26" style="--drift: -5px; animation-duration: 7.32s; animation-delay: -0.80s">AI</text>
+<text class="thought" x="359" y="180" font-size="16px" fill="#665c54" style="--drift: -13px; animation-duration: 8.85s; animation-delay: -5.43s">LLM</text>
+<text class="thought" x="366" y="190" font-size="12px" fill="#fe8019" style="--drift: 9px; animation-duration: 6.76s; animation-delay: -2.35s">MCP</text>
+<text class="thought" x="363" y="222" font-size="13px" fill="#b8bb26" style="--drift: 7px; animation-duration: 8.98s; animation-delay: -4.18s">agent.run()</text>
+<text class="thought" x="387" y="222" font-size="13px" fill="#665c54" style="--drift: -9px; animation-duration: 7.03s; animation-delay: -1.86s">∇loss</text>
+</svg>

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Your photo stays on your machine; only the ASCII portrait (ascii.txt) is published.
+# Using the GitHub Action instead? Upload photo.jpg on github.com; this file only affects local git.
+photo.*
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Secrets, just in case
+.env
+
+# Build state used by the Makefile
+.cache/

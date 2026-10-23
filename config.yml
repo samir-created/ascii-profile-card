@@ -1,0 +1,93 @@
+# ascii-profile-card
+# Edit this file and push: the GitHub Action rebuilds dark_mode.svg and light_mode.svg.
+# Build locally with: python -m card.build
+
+# First line of the card, styled like a terminal prompt.
+title: shrestha@samir
+
+# Anything you like, shown just above the details: a greeting, a tagline, a quote, ASCII art.
+# Each entry is a string, or a map with text (or art) plus optional
+# color (text | key | value | dots), size (px), bold, align (left | center | right).
+# header:
+#   - text: "Hi, I'm Samir 👋"
+#     color: key
+#     size: 22
+#     bold: true
+#   - "Building plugins, agents & dev tools"
+#   - art: |
+#       ┌─┐┌─┐┌┬┐┬┬─┐
+#       └─┐├─┤││││├┬┘
+#       └─┘┴ ┴┴ ┴┴┴└─
+
+# Each entry is one row of the card:
+#   - Key: value          a "Key ........ value" row (the dots are filled in for you)
+#   - section: Name       a "- Name ---------" divider
+#   - ""                  an empty spacer row
+info:
+  - OS: Me
+  - Host: Myself
+  - Uptime: Powered by coffee
+  - Kernel: Software Dev 1.0.0-LTS
+  - ""
+  - Languages.Programming: PHP, JS, TS, Python
+  - Languages.Web: React, Next.js
+  - Languages.Real: English
+  - ""
+  - Hobbies.Software: Coding anything & everything
+  - Hobbies.Mind: Problem solving
+  - ""
+  - section: Contact
+  - Email.Personal: contact.samirshrestha@gmail.com
+  - GitHub: CodeSawMir
+  - ""
+  - section: Status
+  - Currently: learning++  // no overflow yet
+
+portrait:
+  # Drop a photo of yourself here (jpg or png). The background is removed automatically,
+  # so any photo works; a head-and-shoulders shot against a plain wall works best.
+  # Leave it out to keep using ascii.txt as it is.
+  photo: photo.jpg
+  # The ASCII portrait the card uses. Generated from the photo with: python -m card.portrait
+  ascii: ascii.txt
+  columns: 80
+  rows: 45
+  framing: head   # head (hair to chin) | shoulders (head and shoulders)
+  # Optional manual crop in photo pixels [left, top, right, bottom]; omit to crop to your head and shoulders.
+  # crop: [120, 40, 900, 1000]
+  gamma: 1.4      # higher = lighter skin, lower = darker
+  edges: 2.5      # outline strength
+  ramp: " .,:;-=+*#%@"   # characters from lightest to darkest
+  # Background-removal model (downloaded once). u2net_human_seg is made for people (167 MB).
+  # Others: isnet-general-use (170 MB), silueta (42 MB, rougher), birefnet-portrait (bigger, finer hair).
+  model: u2net_human_seg
+
+thoughts:
+  # Symbols that float up from your head and fade out (turn on with style.animations: [thoughts]).
+  rise_seconds: [6, 9]
+  symbols: [
+    "∑", "π", "∫dx", "√2", "λ", "∞", "Δ", "e^iπ", "x²", "log n",
+    "<?php", "$this->", "add_action()",
+    "<App />", "useState()", "{props}",
+    "npm i", "await", "=>",
+    "def", "import", "print()",
+    "AI", "LLM", "MCP", "agent.run()", "∇loss",
+  ]
+
+layout:
+  info_width: 64     # characters per info row
+  info_offset: 30    # px to sit the info lower than centred beside the portrait
+
+style:
+  theme: github         # github, dracula, nord, gruvbox, tokyo-night, catppuccin, solarized, monokai, one-dark, rose-pine, custom
+  layout: side          # side | portrait-right | stacked
+  info_style: dots      # dots ("Key ..... value") | aligned | arrows
+  charset: classic      # classic | blocks | binary | dots | dense | hex
+  invert: false         # true flips the portrait: bright areas get the dense characters
+  frame: plain          # plain | window (terminal title bar)
+  animations: [thoughts]   # any of: thoughts, rain, cursor. [] for a still card
+
+# Only used with theme: custom. One SVG is written per palette, named <name>_mode.svg.
+# themes:
+#   dark:  {bg: "#161b22", text: "#c9d1d9", key: "#ffa657", value: "#a5d6ff", dots: "#616e7f"}
+#   light: {bg: "#f6f8fa", text: "#24292f", key: "#953800", value: "#0a3069", dots: "#c2cfde"}

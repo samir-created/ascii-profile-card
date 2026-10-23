@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,'SFMono-Regular',Menlo,monospace" width="1126" height="544">
+<style>
+.key {fill: #f92672;}
+.value {fill: #a6e22e;}
+.dots {fill: #75715e;}
+text, tspan {white-space: pre;}
+.thought {opacity: 0; transform-box: fill-box; transform-origin: center; animation: think ease-out infinite;}
+@keyframes think {
+  0% {opacity: 0; transform: translate(0, 0) scale(0.6);}
+  20% {opacity: 0.95;}
+  70% {opacity: 0.6;}
+  100% {opacity: 0; transform: translate(var(--drift), -75px) scale(1.1);}
+}
+.rain {opacity: 0.35; animation: fall linear infinite;}
+@keyframes fall {from {transform: translateY(-100%);} to {transform: translateY(var(--fall));}}
+.cursor {animation: blink 1s step-end infinite;}
+@keyframes blink {0%, 100% {opacity: 1;} 50% {opacity: 0;}}
+@media (prefers-reduced-motion: reduce) {
+  .thought, .rain {display: none;}
+  .cursor {animation: none;}
+}
+</style>
+<defs><clipPath id="card"><rect width="1126" height="544" rx="15"/></clipPath></defs>
+<rect width="1126" height="544" fill="#272822" rx="15"/>
+<g clip-path="url(#card)">
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 739px; animation-duration: 9.74s; animation-delay: -2.71s"><tspan x="16" dy="0">1</tspan><tspan x="11" dy="13">0</tspan><tspan x="8" dy="13">1</tspan><tspan x="14" dy="13">0</tspan><tspan x="7" dy="13">1</tspan><tspan x="8" dy="13">0</tspan><tspan x="13" dy="13">1</tspan><tspan x="18" dy="13">0</tspan><tspan x="13" dy="13">0</tspan><tspan x="7" dy="13">0</tspan><tspan x="17" dy="13">0</tspan><tspan x="15" dy="13">1</tspan><tspan x="11" dy="13">0</tspan><tspan x="12" dy="13">1</tspan><tspan x="12" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 752px; animation-duration: 11.78s; animation-delay: -2.09s"><tspan x="64" dy="0">0</tspan><tspan x="60" dy="13">1</tspan><tspan x="61" dy="13">1</tspan><tspan x="52" dy="13">0</tspan><tspan x="57" dy="13">1</tspan><tspan x="57" dy="13">0</tspan><tspan x="62" dy="13">0</tspan><tspan x="55" dy="13">0</tspan><tspan x="58" dy="13">1</tspan><tspan x="57" dy="13">0</tspan><tspan x="61" dy="13">1</tspan><tspan x="56" dy="13">1</tspan><tspan x="56" dy="13">1</tspan><tspan x="61" dy="13">0</tspan><tspan x="54" dy="13">0</tspan><tspan x="52" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 752px; animation-duration: 9.23s; animation-delay: -4.18s"><tspan x="100" dy="0">0</tspan><tspan x="110" dy="13">0</tspan><tspan x="103" dy="13">1</tspan><tspan x="99" dy="13">1</tspan><tspan x="110" dy="13">0</tspan><tspan x="101" dy="13">1</tspan><tspan x="110" dy="13">0</tspan><tspan x="101" dy="13">1</tspan><tspan x="110" dy="13">0</tspan><tspan x="99" dy="13">0</tspan><tspan x="101" dy="13">1</tspan><tspan x="98" dy="13">1</tspan><tspan x="108" dy="13">1</tspan><tspan x="99" dy="13">0</tspan><tspan x="101" dy="13">0</tspan><tspan x="98" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 739px; animation-duration: 10.36s; animation-delay: -8.83s"><tspan x="154" dy="0">0</tspan><tspan x="154" dy="13">0</tspan><tspan x="152" dy="13">1</tspan><tspan x="155" dy="13">0</tspan><tspan x="153" dy="13">0</tspan><tspan x="153" dy="13">0</tspan><tspan x="152" dy="13">1</tspan><tspan x="155" dy="13">0</tspan><tspan x="149" dy="13">0</tspan><tspan x="145" dy="13">1</tspan><tspan x="147" dy="13">1</tspan><tspan x="147" dy="13">1</tspan><tspan x="148" dy="13">0</tspan><tspan x="155" dy="13">0</tspan><tspan x="146" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 661px; animation-duration: 10.54s; animation-delay: -9.73s"><tspan x="193" dy="0">0</tspan><tspan x="199" dy="13">0</tspan><tspan x="193" dy="13">1</tspan><tspan x="193" dy="13">0</tspan><tspan x="192" dy="13">1</tspan><tspan x="196" dy="13">0</tspan><tspan x="191" dy="13">0</tspan><tspan x="201" dy="13">1</tspan><tspan x="198" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 739px; animation-duration: 7.54s; animation-delay: -0.87s"><tspan x="247" dy="0">1</tspan><tspan x="248" dy="13">0</tspan><tspan x="243" dy="13">0</tspan><tspan x="242" dy="13">1</tspan><tspan x="240" dy="13">0</tspan><tspan x="237" dy="13">1</tspan><tspan x="245" dy="13">0</tspan><tspan x="246" dy="13">1</tspan><tspan x="240" dy="13">1</tspan><tspan x="247" dy="13">1</tspan><tspan x="247" dy="13">0</tspan><tspan x="246" dy="13">0</tspan><tspan x="243" dy="13">1</tspan><tspan x="241" dy="13">0</tspan><tspan x="243" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 700px; animation-duration: 10.96s; animation-delay: -4.84s"><tspan x="293" dy="0">1</tspan><tspan x="287" dy="13">1</tspan><tspan x="287" dy="13">0</tspan><tspan x="288" dy="13">0</tspan><tspan x="286" dy="13">0</tspan><tspan x="288" dy="13">0</tspan><tspan x="293" dy="13">0</tspan><tspan x="288" dy="13">1</tspan><tspan x="285" dy="13">0</tspan><tspan x="286" dy="13">0</tspan><tspan x="290" dy="13">0</tspan><tspan x="288" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 687px; animation-duration: 9.30s; animation-delay: -4.83s"><tspan x="332" dy="0">1</tspan><tspan x="330" dy="13">1</tspan><tspan x="338" dy="13">0</tspan><tspan x="339" dy="13">1</tspan><tspan x="331" dy="13">1</tspan><tspan x="331" dy="13">0</tspan><tspan x="334" dy="13">0</tspan><tspan x="337" dy="13">1</tspan><tspan x="338" dy="13">0</tspan><tspan x="333" dy="13">1</tspan><tspan x="339" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 713px; animation-duration: 8.20s; animation-delay: -3.89s"><tspan x="383" dy="0">1</tspan><tspan x="378" dy="13">0</tspan><tspan x="377" dy="13">0</tspan><tspan x="382" dy="13">1</tspan><tspan x="381" dy="13">1</tspan><tspan x="382" dy="13">0</tspan><tspan x="382" dy="13">1</tspan><tspan x="379" dy="13">0</tspan><tspan x="383" dy="13">1</tspan><tspan x="377" dy="13">0</tspan><tspan x="384" dy="13">0</tspan><tspan x="379" dy="13">1</tspan><tspan x="386" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 674px; animation-duration: 7.59s; animation-delay: -6.58s"><tspan x="429" dy="0">1</tspan><tspan x="426" dy="13">0</tspan><tspan x="422" dy="13">1</tspan><tspan x="429" dy="13">0</tspan><tspan x="425" dy="13">0</tspan><tspan x="421" dy="13">1</tspan><tspan x="422" dy="13">1</tspan><tspan x="422" dy="13">0</tspan><tspan x="425" dy="13">1</tspan><tspan x="426" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 661px; animation-duration: 9.57s; animation-delay: -0.34s"><tspan x="469" dy="0">1</tspan><tspan x="478" dy="13">1</tspan><tspan x="472" dy="13">1</tspan><tspan x="469" dy="13">0</tspan><tspan x="470" dy="13">0</tspan><tspan x="466" dy="13">1</tspan><tspan x="473" dy="13">1</tspan><tspan x="472" dy="13">0</tspan><tspan x="469" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 752px; animation-duration: 10.10s; animation-delay: -4.04s"><tspan x="516" dy="0">0</tspan><tspan x="518" dy="13">1</tspan><tspan x="523" dy="13">1</tspan><tspan x="519" dy="13">0</tspan><tspan x="521" dy="13">1</tspan><tspan x="518" dy="13">1</tspan><tspan x="522" dy="13">0</tspan><tspan x="518" dy="13">1</tspan><tspan x="516" dy="13">1</tspan><tspan x="523" dy="13">0</tspan><tspan x="516" dy="13">0</tspan><tspan x="524" dy="13">1</tspan><tspan x="519" dy="13">0</tspan><tspan x="517" dy="13">0</tspan><tspan x="518" dy="13">1</tspan><tspan x="512" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 661px; animation-duration: 11.21s; animation-delay: -10.96s"><tspan x="564" dy="0">0</tspan><tspan x="559" dy="13">1</tspan><tspan x="563" dy="13">1</tspan><tspan x="561" dy="13">1</tspan><tspan x="564" dy="13">1</tspan><tspan x="563" dy="13">1</tspan><tspan x="564" dy="13">0</tspan><tspan x="560" dy="13">0</tspan><tspan x="569" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 648px; animation-duration: 11.95s; animation-delay: -7.36s"><tspan x="606" dy="0">0</tspan><tspan x="604" dy="13">1</tspan><tspan x="608" dy="13">1</tspan><tspan x="607" dy="13">1</tspan><tspan x="605" dy="13">0</tspan><tspan x="614" dy="13">1</tspan><tspan x="613" dy="13">1</tspan><tspan x="604" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 752px; animation-duration: 10.02s; animation-delay: -6.87s"><tspan x="652" dy="0">0</tspan><tspan x="656" dy="13">0</tspan><tspan x="653" dy="13">1</tspan><tspan x="661" dy="13">1</tspan><tspan x="657" dy="13">0</tspan><tspan x="653" dy="13">0</tspan><tspan x="661" dy="13">0</tspan><tspan x="661" dy="13">0</tspan><tspan x="659" dy="13">1</tspan><tspan x="655" dy="13">1</tspan><tspan x="660" dy="13">1</tspan><tspan x="657" dy="13">0</tspan><tspan x="652" dy="13">0</tspan><tspan x="651" dy="13">1</tspan><tspan x="661" dy="13">1</tspan><tspan x="651" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 687px; animation-duration: 9.56s; animation-delay: -3.39s"><tspan x="706" dy="0">1</tspan><tspan x="697" dy="13">0</tspan><tspan x="705" dy="13">1</tspan><tspan x="698" dy="13">0</tspan><tspan x="697" dy="13">0</tspan><tspan x="706" dy="13">1</tspan><tspan x="707" dy="13">0</tspan><tspan x="703" dy="13">0</tspan><tspan x="707" dy="13">1</tspan><tspan x="697" dy="13">0</tspan><tspan x="700" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 687px; animation-duration: 11.83s; animation-delay: -3.05s"><tspan x="749" dy="0">0</tspan><tspan x="750" dy="13">0</tspan><tspan x="752" dy="13">0</tspan><tspan x="747" dy="13">1</tspan><tspan x="751" dy="13">1</tspan><tspan x="753" dy="13">0</tspan><tspan x="743" dy="13">0</tspan><tspan x="746" dy="13">0</tspan><tspan x="752" dy="13">1</tspan><tspan x="749" dy="13">0</tspan><tspan x="748" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 661px; animation-duration: 12.94s; animation-delay: -11.68s"><tspan x="797" dy="0">0</tspan><tspan x="798" dy="13">1</tspan><tspan x="790" dy="13">1</tspan><tspan x="799" dy="13">1</tspan><tspan x="797" dy="13">0</tspan><tspan x="793" dy="13">0</tspan><tspan x="789" dy="13">1</tspan><tspan x="792" dy="13">0</tspan><tspan x="788" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 648px; animation-duration: 9.66s; animation-delay: -4.88s"><tspan x="837" dy="0">1</tspan><tspan x="838" dy="13">1</tspan><tspan x="841" dy="13">0</tspan><tspan x="839" dy="13">1</tspan><tspan x="842" dy="13">0</tspan><tspan x="843" dy="13">0</tspan><tspan x="835" dy="13">0</tspan><tspan x="843" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 687px; animation-duration: 9.52s; animation-delay: -5.02s"><tspan x="888" dy="0">0</tspan><tspan x="881" dy="13">1</tspan><tspan x="883" dy="13">1</tspan><tspan x="887" dy="13">1</tspan><tspan x="892" dy="13">0</tspan><tspan x="888" dy="13">0</tspan><tspan x="887" dy="13">0</tspan><tspan x="885" dy="13">0</tspan><tspan x="885" dy="13">0</tspan><tspan x="890" dy="13">0</tspan><tspan x="885" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 700px; animation-duration: 8.51s; animation-delay: -6.43s"><tspan x="930" dy="0">1</tspan><tspan x="932" dy="13">1</tspan><tspan x="933" dy="13">1</tspan><tspan x="934" dy="13">1</tspan><tspan x="926" dy="13">0</tspan><tspan x="933" dy="13">0</tspan><tspan x="931" dy="13">1</tspan><tspan x="927" dy="13">1</tspan><tspan x="935" dy="13">0</tspan><tspan x="933" dy="13">1</tspan><tspan x="927" dy="13">0</tspan><tspan x="931" dy="13">1</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 648px; animation-duration: 11.01s; animation-delay: -5.01s"><tspan x="978" dy="0">1</tspan><tspan x="974" dy="13">0</tspan><tspan x="979" dy="13">0</tspan><tspan x="973" dy="13">1</tspan><tspan x="977" dy="13">0</tspan><tspan x="982" dy="13">1</tspan><tspan x="978" dy="13">0</tspan><tspan x="976" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 700px; animation-duration: 8.63s; animation-delay: -3.67s"><tspan x="1026" dy="0">1</tspan><tspan x="1022" dy="13">0</tspan><tspan x="1029" dy="13">0</tspan><tspan x="1021" dy="13">0</tspan><tspan x="1024" dy="13">1</tspan><tspan x="1027" dy="13">1</tspan><tspan x="1021" dy="13">0</tspan><tspan x="1026" dy="13">0</tspan><tspan x="1020" dy="13">0</tspan><tspan x="1024" dy="13">0</tspan><tspan x="1029" dy="13">0</tspan><tspan x="1026" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 648px; animation-duration: 11.81s; animation-delay: -5.28s"><tspan x="1065" dy="0">1</tspan><tspan x="1065" dy="13">0</tspan><tspan x="1075" dy="13">0</tspan><tspan x="1071" dy="13">1</tspan><tspan x="1070" dy="13">1</tspan><tspan x="1067" dy="13">1</tspan><tspan x="1070" dy="13">0</tspan><tspan x="1074" dy="13">0</tspan></text>
+<text class="rain" y="0" font-size="11px" fill="#75715e" style="--fall: 687px; animation-duration: 7.46s; animation-delay: -1.59s"><tspan x="1115" dy="0">1</tspan><tspan x="1115" dy="13">0</tspan><tspan x="1114" dy="13">1</tspan><tspan x="1113" dy="13">0</tspan><tspan x="1115" dy="13">1</tspan><tspan x="1117" dy="13">1</tspan><tspan x="1121" dy="13">0</tspan><tspan x="1117" dy="13">1</tspan><tspan x="1117" dy="13">1</tspan><tspan x="1120" dy="13">1</tspan><tspan x="1114" dy="13">0</tspan></text>
+</g>
+<path d="M15 0H1111A15 15 0 0 1 1126 15V34H0V15A15 15 0 0 1 15 0Z" fill="#f8f8f2" fill-opacity="0.07"/>
+<circle cx="24" cy="17" r="6" fill="#ff5f56"/><circle cx="42" cy="17" r="6" fill="#ffbd2e"/><circle cx="60" cy="17" r="6" fill="#27c93f"/>
+<text x="563" y="21" font-size="12px" text-anchor="middle" fill="#75715e">shrestha@samir — zsh</text>
+<text fill="#f8f8f2" font-size="9px">
+<tspan x="24.0" y="67.0">                                         1111111</tspan>
+<tspan x="24.0" y="77.5">                                   111111111111111111111</tspan>
+<tspan x="24.0" y="88.0">                                1111111111111111111111111111</tspan>
+<tspan x="24.0" y="98.5">                           1111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="109.0">                        111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="119.5">                      1111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="130.0">                    1111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="140.5">                   111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="151.0">                 111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="161.5">                11111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="172.0">               1111111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="182.5">             1111111111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="193.0">            11111111111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="203.5">           111111111111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="214.0">           1111111111111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="224.5">          11111111111111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="235.0">         111111111111111111111111111111111111111111111111111111111111111</tspan>
+<tspan x="24.0" y="245.5">        111111111111111111111111111111111111111111111011000011111111111</tspan>
+<tspan x="24.0" y="256.0">       1111111111111111111111111111111111111111111011110000111111111111</tspan>
+<tspan x="24.0" y="266.5">       101111111111111111111111111111111111111001101100001111111111111</tspan>
+<tspan x="24.0" y="277.0">       111111111111111111111111111111110000000000001111111110011111111</tspan>
+<tspan x="24.0" y="287.5">       111111111111111111111111111110000000000001111111110110011011111</tspan>
+<tspan x="24.0" y="298.0">         1111111111111111111111100000000001111111100100011111001101110</tspan>
+<tspan x="24.0" y="308.5">          1111111111111111111111111001111111100000000000011111011011101</tspan>
+<tspan x="24.0" y="319.0">             11100111111101111111111111110000000001000000111110110111001</tspan>
+<tspan x="24.0" y="329.5">               100001101100000111111110000000000011100011110011000001001111</tspan>
+<tspan x="24.0" y="340.0">                1000100110110001000000000000000001111111111100000000000111111</tspan>
+<tspan x="24.0" y="350.5">                  10100011111001000000000000000111111011100000100000000111111001</tspan>
+<tspan x="24.0" y="361.0">                    100000111100100000000000111111111011111111000000000111111111</tspan>
+<tspan x="24.0" y="371.5">                    100000001111100000000000111111111111111111000000000111111111</tspan>
+<tspan x="24.0" y="382.0">                    100011111110000000001011111111111111111111000000001111111111</tspan>
+<tspan x="24.0" y="392.5">                        11111100001000000111111111111111111111000000001111111111</tspan>
+<tspan x="24.0" y="403.0">                         1111111111001111111111111111111111111100000011111111111</tspan>
+<tspan x="24.0" y="413.5">                          101111111111001111111111111111111111111000011111111111</tspan>
+<tspan x="24.0" y="424.0">                          101111101111111111111111111111111111111100111111111111</tspan>
+<tspan x="24.0" y="434.5">                            1111111111111111111111111111111111111001111111111111</tspan>
+<tspan x="24.0" y="445.0">                          111100011111111111111111111111111110000111111111111111</tspan>
+<tspan x="24.0" y="455.5">                        11100111111111111111111111111111111100001111111111111111</tspan>
+<tspan x="24.0" y="466.0">                     11000000111111111111111111111111111111111111111110111111111</tspan>
+<tspan x="24.0" y="476.5">                   0000000101100111111111111111011111111111111111111100111111111</tspan>
+<tspan x="24.0" y="487.0">                 110000001101100111111111111110000111111111111111110000111111111</tspan>
+<tspan x="24.0" y="497.5">               11110000011011111111111111111110000111111111111111100000111111111</tspan>
+<tspan x="24.0" y="508.0">            11111100000011011111111111111111111000011110000011111100001111111111</tspan>
+<tspan x="24.0" y="518.5">          1111111111111111111111111111111111111111011111111111111110011111111111</tspan>
+</text>
+
+<text fill="#f8f8f2" font-size="16px">
+<tspan x="488" y="135">shrestha@samir <tspan class="dots">-------------------------------------------------</tspan></tspan>
+<tspan x="488" y="155"><tspan class="dots">. </tspan><tspan class="key">OS</tspan>:<tspan class="dots"> ....................................................... </tspan><tspan class="value">Me</tspan></tspan>
+<tspan x="488" y="175"><tspan class="dots">. </tspan><tspan class="key">Host</tspan>:<tspan class="dots"> ................................................. </tspan><tspan class="value">Myself</tspan></tspan>
+<tspan x="488" y="195"><tspan class="dots">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="dots"> .................................... </tspan><tspan class="value">Powered by coffee</tspan></tspan>
+<tspan x="488" y="215"><tspan class="dots">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="dots"> ............................... </tspan><tspan class="value">Software Dev 1.0.0-LTS</tspan></tspan>
+<tspan x="488" y="235"><tspan class="dots">.</tspan></tspan>
+<tspan x="488" y="255"><tspan class="dots">. </tspan><tspan class="key">Languages.Programming</tspan>:<tspan class="dots"> ................... </tspan><tspan class="value">PHP, JS, TS, Python</tspan></tspan>
+<tspan x="488" y="275"><tspan class="dots">. </tspan><tspan class="key">Languages.Web</tspan>:<tspan class="dots"> ................................ </tspan><tspan class="value">React, Next.js</tspan></tspan>
+<tspan x="488" y="295"><tspan class="dots">. </tspan><tspan class="key">Languages.Real</tspan>:<tspan class="dots"> ...................................... </tspan><tspan class="value">English</tspan></tspan>
+<tspan x="488" y="315"><tspan class="dots">.</tspan></tspan>
+<tspan x="488" y="335"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Software</tspan>:<tspan class="dots"> ............... </tspan><tspan class="value">Coding anything &amp; everything</tspan></tspan>
+<tspan x="488" y="355"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Mind</tspan>:<tspan class="dots"> ................................ </tspan><tspan class="value">Problem solving</tspan></tspan>
+<tspan x="488" y="375"><tspan class="dots">.</tspan></tspan>
+<tspan x="488" y="395"><tspan class="dots">- </tspan>Contact <tspan class="dots">------------------------------------------------------</tspan></tspan>
+<tspan x="488" y="415"><tspan class="dots">. </tspan><tspan class="key">Email.Personal</tspan>:<tspan class="dots"> .............. </tspan><tspan class="value">contact.samirshrestha@gmail.com</tspan></tspan>
+<tspan x="488" y="435"><tspan class="dots">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="dots"> ........................................... </tspan><tspan class="value">CodeSawMir</tspan></tspan>
+<tspan x="488" y="455"><tspan class="dots">.</tspan></tspan>
+<tspan x="488" y="475"><tspan class="dots">- </tspan>Status <tspan class="dots">-------------------------------------------------------</tspan></tspan>
+<tspan x="488" y="495"><tspan class="dots">. </tspan><tspan class="key">Currently</tspan>:<tspan class="dots"> .................... </tspan><tspan class="value">learning++  // no overflow yet</tspan></tspan>
+</text>
+<text x="488" y="515" font-size="16px" fill="#f92672">shrestha@samir:~$ </text>
+<rect class="cursor" x="661" y="502" width="10" height="18" fill="#a6e22e"/>
+</svg>
