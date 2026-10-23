@@ -94,7 +94,7 @@ jobs:
               echo "  <img alt=\"$OWNER's profile card\" src=\"$base/dark_mode.svg\">"
               echo '</picture>'
               echo
-              echo '<sub>Made with <a href="https://github.com/CodeSawMir/ascii-profile-card">ascii-profile-card</a></sub>'
+              echo '<sub>Made with <a href="https://github.com/samir-created/ascii-profile-card">ascii-profile-card</a></sub>'
             } > README.md
             echo "Profile README written."
           fi
