@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,'SFMono-Regular',Menlo,monospace" width="1083" height="384">
+<style>
+.key {fill: #ffa657;}
+.value {fill: #a5d6ff;}
+.dots {fill: #616e7f;}
+text, tspan {white-space: pre;}
+.thought {opacity: 0; transform-box: fill-box; transform-origin: center; animation: think ease-out infinite;}
+@keyframes think {
+  0% {opacity: 0; transform: translate(0, 0) scale(0.6);}
+  20% {opacity: 0.95;}
+  70% {opacity: 0.6;}
+  100% {opacity: 0; transform: translate(var(--drift), -75px) scale(1.1);}
+}
+.rain {opacity: 0.35; animation: fall linear infinite;}
+@keyframes fall {from {transform: translateY(-100%);} to {transform: translateY(var(--fall));}}
+.cursor {animation: blink 1s step-end infinite;}
+@keyframes blink {0%, 100% {opacity: 1;} 50% {opacity: 0;}}
+@media (prefers-reduced-motion: reduce) {
+  .thought, .rain {display: none;}
+  .cursor {animation: none;}
+}
+</style>
+<defs><clipPath id="card"><rect width="1083" height="384" rx="15"/></clipPath></defs>
+<rect width="1083" height="384" fill="#161b22" rx="15"/>
+
+<text fill="#c9d1d9" font-size="9px">
+<tspan x="24.0" y="33.0">                                  %%%%#####%##</tspan>
+<tspan x="24.0" y="43.5">                            %*##%%##%#####*###****##</tspan>
+<tspan x="24.0" y="54.0">                        *++###%@@@@@@@%@%@@@@@@@#*+---=*</tspan>
+<tspan x="24.0" y="64.5">                     *---=*%@@@@@%@@@@%%%##%%@%%%@@#*-::;-*</tspan>
+<tspan x="24.0" y="75.0">                   =;::-#@@@@@@@%%%%%%%%%%%###%%#%%%@@#+-::-=#</tspan>
+<tspan x="24.0" y="85.5">                 =;::;#@@%%@@@@@@@@%%%%%%##@%%####%%##@@*=:::;=#</tspan>
+<tspan x="24.0" y="96.0">               =;:;;;+@####%%%@@@@@@%%###@%#%####*##**#%@#-:;;:;=</tspan>
+<tspan x="24.0" y="106.5">             #-:;;;;+%%%##%#*#%@@@@@@@%#*%%%%##*%##%###%@@%+-;;;:-#</tspan>
+<tspan x="24.0" y="117.0">            *;;;--;=#@@%%%%#@@@#==++##@@%@@%%@%%@%%%%%#%%@@*;;;;;:;*</tspan>
+<tspan x="24.0" y="127.5">           *;;;---;-@@@%@@@@@%#-,..,;+*%**@#@#%@%%@%@@%%%@@#:;-;;;;;+</tspan>
+<tspan x="24.0" y="138.0">           ;;;----;-*@@@@@@@@=:::;;:,,,:,;;+#*=*#*#%##@@@@@+-;-;;;;;;*</tspan>
+<tspan x="24.0" y="148.5">          -;-------;=%@@%%@#=;=*#%#**+-;:.,,:,,::-+*+%#%@@*;;-----;;:-</tspan>
+<tspan x="24.0" y="159.0">         +;;-------;;=@@%%#-,,:-+*#####%*;,,,,,;+**###+%@#-;-------;;:=</tspan>
+<tspan x="24.0" y="169.5">         -;----------;=#%@+,,,:+-##==+;;-;,,,,-*##*+=--++;;----------;-</tspan>
+<tspan x="24.0" y="180.0">         ;;---------;;;;*%=,,,,-*@@%*=-,,,,,,;;*%+*==:;=-------------;;*</tspan>
+<tspan x="24.0" y="190.5">        #;---------=;:---=:,,,,,:;==;,,,,,,,,,;*%%++;;-=-------------;;*</tspan>
+<tspan x="24.0" y="201.0">        *;-----------;-=-:,,,,,,,,,,,,,,,,,,:,,:::,,,:-=-------------;;*</tspan>
+<tspan x="24.0" y="211.5">         ;;----------=--=:,,,,,,,,,,,,,,,,,,;;,,,,,,,----------------;;*</tspan>
+<tspan x="24.0" y="222.0">         -;-----------=-==:,,,,,,,,,,,,,,:,,:=,,,,,,:==--------------;-</tspan>
+<tspan x="24.0" y="232.5">         =;-------------=%=:,,,,,,,,,,,,,::,-:,,,,,:==---------------;=</tspan>
+<tspan x="24.0" y="243.0">          ;;-------------=-;,,,,,,:;:::::,,:::::,,:-=---------------;-</tspan>
+<tspan x="24.0" y="253.5">          *;;----------===;=;,,,,,,,:::::,,,:;,,,:-==--=-----------;;+</tspan>
+<tspan x="24.0" y="264.0">           =;--------=====::-=;,,,,,,,,;;-;:,,::;=+==-==----------;;+</tspan>
+<tspan x="24.0" y="274.5">            =;---====+=-+;,,;--=-;,,,,,,,,,,,:;=**+=====--=------;;=</tspan>
+<tspan x="24.0" y="285.0">             +--=+==-;;=-,,,,:;--++-:,,,:;:::=+==+**#**+=+====--;;+</tspan>
+<tspan x="24.0" y="295.5">               +=::::::-;,,:,,::---=++=---===-=:::::;--=++**+=-;-</tspan>
+<tspan x="24.0" y="306.0">                #+:,:,.,=:,::,:,,:--;-===+=;;--::::::::::::;-+++</tspan>
+<tspan x="24.0" y="316.5">                  *=;,..,;,,:,,:,,,:;;;;-;;;--;:;:;,.:,....:=#</tspan>
+<tspan x="24.0" y="327.0">                    #+-,.,;;:,,,;,,,,;;;;;;;-=::;::,....:-+*</tspan>
+<tspan x="24.0" y="337.5">                       *++-::::,:;,,,;;;-----;:;...,,;=+*</tspan>
+<tspan x="24.0" y="348.0">                          #++++=;::::;;;;;;;:;,--==+*#</tspan>
+<tspan x="24.0" y="358.5">                                ##***+****+-**+#</tspan>
+</text>
+
+<text fill="#c9d1d9" font-size="16px">
+<tspan x="445" y="118">Aayush 2 <tspan class="dots">-------------------------------------------------------</tspan></tspan>
+<tspan x="445" y="138"><tspan class="dots">. </tspan><tspan class="key">OS</tspan>:<tspan class="dots"> ....................................................... </tspan><tspan class="value">Me</tspan></tspan>
+<tspan x="445" y="158"><tspan class="dots">. </tspan><tspan class="key">Host</tspan>:<tspan class="dots"> ................................................. </tspan><tspan class="value">Myself</tspan></tspan>
+<tspan x="445" y="178"><tspan class="dots">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="dots"> .................................... </tspan><tspan class="value">Powered by coffee</tspan></tspan>
+<tspan x="445" y="198"><tspan class="dots">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="dots"> .................................. </tspan><tspan class="value">Developer 1.0.0-LTS</tspan></tspan>
+<tspan x="445" y="218"><tspan class="dots">.</tspan></tspan>
+<tspan x="445" y="238"><tspan class="dots">. </tspan><tspan class="key">Languages</tspan>:<tspan class="dots"> ................................ </tspan><tspan class="value">TypeScript, Python</tspan></tspan>
+<tspan x="445" y="258"><tspan class="dots">. </tspan><tspan class="key">Hobbies</tspan>:<tspan class="dots"> ........................ </tspan><tspan class="value">Coding anything &amp; everything</tspan></tspan>
+<tspan x="445" y="278"><tspan class="dots">.</tspan></tspan>
+<tspan x="445" y="298"><tspan class="dots">- </tspan>Contact <tspan class="dots">------------------------------------------------------</tspan></tspan>
+<tspan x="445" y="318"><tspan class="dots">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="dots"> ............................................. </tspan><tspan class="value">yourname</tspan></tspan>
+<tspan x="445" y="338"><tspan class="dots">. </tspan><tspan class="key">Email</tspan>:<tspan class="dots"> ....................................... </tspan><tspan class="value">you@example.com</tspan></tspan>
+</text>
+
+</svg>
